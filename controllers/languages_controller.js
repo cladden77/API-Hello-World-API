@@ -50,7 +50,7 @@ languages.get('/', (req, res) => {
 
 // Show:
 languages.get('/:name', (req, res) => {
-    Language.findOne({ name: req.params.language .toLowerCase() })
+    Language.findOne({ name: req.params.name .toLowerCase() })
         .then(foundLanguage => {
             res.json(foundLanguage)
         })
